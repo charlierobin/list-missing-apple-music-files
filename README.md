@@ -2,6 +2,8 @@
 
 Uses the XML file exported from Apple’s macOS Music app (File ▸ Library ▸ Export Library…), therefore the results are only as up-to-date as the last time you did this export.
 
+<img width="492" alt="music export menu screenshot" src="https://github.com/charlierobin/list-missing-apple-music-files/assets/10506323/85e3f450-dd4e-4f2d-815e-7b9e2a7375e0">
+
 Files can be missing in two different ways:
 
 **(1)** If Music has lost track of the music file, and there is an exclamation mark in a circle by the track in the Music window, then when the XML file is exported the track info dictionary will have no `Location` value.
