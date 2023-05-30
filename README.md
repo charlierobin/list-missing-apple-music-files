@@ -16,6 +16,12 @@ Tracks missing a `Location` key-value pair are listed.
 
 If a track has a `Location` value, it checks that the path is a file. If no file is found, the track is listed.
 
+The app experiments with two different ways of using the XML data: (1) using Xojo’s XML classes to read in the document and then find the `Tracks` node and iterate its contents, and (2) using the TextStream class to read the XML line by line, looking for the right key-name-value pairs and then getting the appropriate values (track name, artist name, album name, location path) out with some very simple RegEx.
+
+Xojo’s XML parsing classes are based on Expat 1.95.7.
+
+[The Expat XML Parser page on Github](https://libexpat.github.io)
+
 ## Notes
 
 At the moment, both the stream and XML implementations are pretty bodged up. 
@@ -28,6 +34,6 @@ The stream implementation depends on the key-value pairs being on the same line,
 
 That’s a long-winded way of saying that the app works perfectly with the 121MB XML file that Music exports on my machine running macOS Catalina, but who knows what happens with any other versions of the app running on other versions of macOS.
 
-As far as speed goes, on my Mac, the stream version is far faster: 16 seconds versus 49 seconds. No real surprises there, I think.
+As far as speed goes, on my Mac, the TextStream version is far faster: 16 seconds versus 49 seconds. No real surprises there, I think.
 
 [Link to pre-built universal binary (Intel and Apple Silicon)](https://dl.dropboxusercontent.com/s/wtczr4yhqq1bv3v/Missing_Music_Files.zip?dl=0)
