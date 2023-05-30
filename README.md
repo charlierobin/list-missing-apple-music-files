@@ -16,7 +16,7 @@ Tracks missing a `Location` key-value pair are listed.
 
 If a track has a `Location` value, it checks that the path is a file. If no file is found, the track is listed.
 
-##Notes
+## Notes
 
 At the moment, both the stream and XML implementations are pretty bodged up. 
 
