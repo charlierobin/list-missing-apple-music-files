@@ -258,7 +258,7 @@ End
 		    
 		    regex.SearchPattern = "<string>(.*)</string>"
 		    
-		    System.DebugLog( "regex" )
+		    // System.DebugLog( "regex" )
 		    
 		  end if
 		  
@@ -266,7 +266,12 @@ End
 		  
 		  if m <> nil then
 		    
-		    return m.SubExpressionString( 1 )
+		    // a bodge for ampersands which are in values as entities (the source is an XML file, after all)
+		    // should substitute in something a little better, like …
+		    
+		    // https://github.com/gkjpettet/HTMLEncode
+		    
+		    return m.SubExpressionString( 1 ).ReplaceAll( "&#38;", "&" )
 		    
 		  else
 		    
@@ -301,10 +306,6 @@ End
 		        location = DecodeURLComponent( location, Encodings.UTF8 )
 		        
 		        location = location.Middle( prefixToStripOff.Length() )
-		        
-		        // this is a bodge for amerpsands which are in path as entities (the source is an XML file, after all)
-		        
-		        location = location.ReplaceAll( "&#38;", "&" )
 		        
 		        var f as FolderItem = new FolderItem( location, FolderItem.PathModes.Native )
 		        
