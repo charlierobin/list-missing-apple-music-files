@@ -36,4 +36,15 @@ That’s a long-winded way of saying that the app works perfectly with the 121MB
 
 As far as speed goes, on my Mac, the TextStream version is far faster: 16 seconds versus 49 seconds. No real surprises there, I think.
 
-[Link to pre-built universal binary (Intel and Apple Silicon)](https://dl.dropboxusercontent.com/s/wtczr4yhqq1bv3v/Missing_Music_Files.zip?dl=0)
+[Link to pre-built universal binary (Intel and Apple Silicon)](https://github.com/charlierobin/list-missing-apple-music-files/releases)
+
+### Notes as of Aug 2025
+
+What was supposed to happen here was that the original (temporary) way of using the Music-exported XML file would be replaced by one of my other command line versions of identifying the missing tracks, one that actually used the macOS API to interrogate the user’s “live” music database.
+
+[Command line version in Swift](https://github.com/charlierobin/list-missing-apple-music-files-swift)
+
+[Command line version in Objective-C](https://github.com/charlierobin/list-missing-apple-music-files-objc)
+
+Of course, that never happened, there being nothing so permanent as that which is temporary.
+
