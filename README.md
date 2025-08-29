@@ -40,7 +40,7 @@ As far as speed goes, on my Mac, the TextStream version is far faster: 16 second
 
 ### Notes as of Aug 2025
 
-What was supposed to happen here was that the original (temporary) way of using the Music-exported XML file would be replaced by one of my other command line versions of identifying the missing tracks, one that actually used the macOS API to interrogate the user’s “live” music database.
+What was supposed to happen here was that the original (temporary) way of using the Music-exported XML file would be replaced by one of my other command line versions of identifying the missing tracks, one that actually uses the macOS API to interrogate the user’s “live” music database. So this Xojo app would basically just be a GUI front end to that command line back end.
 
 [Command line version in Swift](https://github.com/charlierobin/list-missing-apple-music-files-swift)
 
